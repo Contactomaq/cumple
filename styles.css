@@ -1,0 +1,224 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Fondo de gradiente */
+    color: white;
+    text-align: center;
+    background-image: url('https://media.istockphoto.com/id/165794474/es/vector/sin-fisuras-del-d%C3%ADa-de-san-valent%C3%ADn-de-fondo.jpg?s=612x612&w=0&k=20&c=RTnP31sru5lR3uvs6elROZEXzQ85Hl_iG9XkAuFn8mg='); /* Fondo con patrón */
+    background-size: cover;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+    margin: auto;
+}
+
+/* Títulos y textos */
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #e83e8c; /* Rosa intenso */
+    animation: fadeIn 2s ease-in-out, colorChange 4s infinite, textGlow 1.5s ease-in-out infinite; /* Animaciones combinadas */
+    background: linear-gradient(to right, #e83e8c, #f5c800);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Necesario para el efecto de color de fondo */
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+    0% { color: #e83e8c; }
+    50% { color: #f5c800; }
+    100% { color: #e83e8c; }
+}
+
+/* Animación de brillo de texto */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); }
+    50% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.9); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); }
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+.Saludo {
+    font-weight: bolder;
+    color: #66151bb9;
+}
+
+/* Sorpresa y formulario */
+#surprise, #schedule {
+    color: #000;
+    margin-top: 20px;
+    animation: slideIn 2s ease-out;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+label {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #dc3545; /* Rojo brillante */
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+button[type="submit"] {
+    background-color: #c73d5b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #df3f00;
+}
+
+#confirmation {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #cc332e; /* Verde */
+}
+
+/* Alerta personalizada */
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#alert-message {
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones de alerta */
+#alert-yes, #alert-no {
+    background-color: #333; /* Color de fondo oscuro para un contraste elegante */
+    border: none;
+    padding: 12px 24px; /* Aumentar el tamaño del padding para un toque más cómodo */
+    border-radius: 8px; /* Bordes redondeados más grandes para un diseño moderno */
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Añadido un efecto de transformación */
+    margin: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera para mayor profundidad */
+}
+
+#alert-yes {
+    background-color: #28a745; /* Verde para el botón de aceptación */
+}
+
+#alert-yes:hover {
+    background-color: #218838; /* Verde más oscuro para el estado hover */
+    transform: scale(1.05); /* Efecto de escalado para interacción visual */
+}
+
+#alert-no {
+    background-color: #dc3545; /* Rojo para el botón de rechazo */
+}
+
+#alert-no:hover {
+    background-color: #c82333; /* Rojo más oscuro para el estado hover */
+    transform: scale(1.05); /* Efecto de escalado para interacción visual */
+}
+
+
+/* Ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+        font-size: 0.9em; /* Ajustar el tamaño de fuente */
+    }
+
+    h1 {
+        font-size: 2em; /* Tamaño de fuente del título más pequeño */
+    }
+
+    p, label, button {
+        font-size: 1em; /* Ajustar tamaño de fuente para texto y botones */
+    }
+
+    input, button[type="submit"] {
+        max-width: 85%; /* Hacer que los campos de entrada y botones se ajusten al contenedor */
+    }
+}

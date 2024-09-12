@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h1>¡Feliz Cumpleaños, Sofi!✨</h1>
+            <p class="Saludo">Que tengas un día increíble lleno de alegría y sorpresas!</p>
+            <button id="surprise-btn">¡Sorpresa!</button>
+            <button id="schedule-btn">Programar Cita</button>
+            <div id="surprise" class="hidden">
+                <p>Mmm, es una sorpresa, ¡lo sabrás después! 😘🎁🎉🕛</p>
+            </div>
+            <div id="schedule" class="hidden">
+                <h2>Agenda tu cita:</h2>
+                <form id="schedule-form">
+                    <label for="date">Selecciona la fecha:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="time">Selecciona la hora:</label>
+                    <input type="time" id="time" name="time" required>
+                    <button type="submit">Confirmar Cita</button>
+                </form>
+                <p id="confirmation" class="hidden"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Alerta personalizada -->
+    <div id="custom-alert" class="alert hidden">
+        <div class="alert-content">
+            <p id="alert-message"></p>
+            <button id="alert-yes">Síí💗</button>
+            <button id="alert-no">Noo 💔(Igual no anda el boton del No )</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
